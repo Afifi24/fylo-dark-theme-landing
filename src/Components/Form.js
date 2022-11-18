@@ -67,6 +67,9 @@ const Formstyle = styled.div`
     color: #fff;
     cursor: pointer;
   padding: 0rem 1rem;
+  &:hover{
+    filter: brightness(1.5);
+  }
    }
    /* media query */
    @media(max-width:1164px){

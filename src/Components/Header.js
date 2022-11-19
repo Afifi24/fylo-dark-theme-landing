@@ -6,9 +6,9 @@ export default function Header() {
       <div className="nav">
         <h2 className='logo'><img src="../images/logo.svg" alt="logo" /></h2>
         <ul className='nav-menu'>
-            <li className='nav-item'>Features</li>
-            <li className='nav-item'>Team</li>
-            <li className='nav-item'>Sign In</li>
+            <li className='nav-item'><span></span> Features</li>
+            <li className='nav-item'><span></span> Team</li>
+            <li className='nav-item'><span></span> Sign In </li>
         </ul>
       </div>
       <div className="header-image">
@@ -44,7 +44,23 @@ font-family: 'Raleway', sans-serif;
     .nav-item{
         margin-left:4rem;
         cursor: pointer;
+        position: relative;
+       
     }
+    .nav-item:hover span{
+      width: 100%;
+    }
+    span{
+          position: absolute;
+          left: 0;
+          bottom:-25%;
+          height: 0.3rem;
+          width: 0%;
+          background-color: #fff;
+      transition: all 0.5s ease;
+
+        }
+        
 }
 .header-image{
     max-width: 700px;

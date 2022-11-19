@@ -24,15 +24,15 @@ export default function Footer() {
         </div>
         <div className="content-nav">
             <div className="nav">
-                <li>About Us</li>
-                <li>Jobs</li>
-                <li>Press</li>
-                <li>Blog</li>
+                <li className='nav-item'> <span></span> About Us</li>
+                <li className='nav-item'> <span></span> Jobs</li>
+                <li className='nav-item'> <span></span> Press</li>
+                <li className='nav-item'> <span></span> Blog</li>
             </div>
             <div className="nav">
-                <li>Contact Us</li>
-                <li>Terms</li>
-                <li>Privacy</li>
+                <li className='nav-item' ><span></span> Contact Us</li>
+                <li className='nav-item' ><span></span> Terms</li>
+                <li className='nav-item' ><span></span> Privacy</li>
             </div>
         </div>
         <div className="content-icons">
@@ -87,8 +87,21 @@ align-items: flex-start;
            display: flex;
            flex-direction: column;
            justify-content: space-between;
-           li{
+           .nav-item{
             cursor: pointer;
+            position: relative;
+           }
+           
+           span{
+            transition: all 0.5s ease;
+            height: 0.3rem;
+            width: 0%;
+            position: absolute;
+            background-color: #fff;
+            bottom: -20%;
+           }
+           .nav-item:hover span{
+            width: 90%;
            }
 
         }
